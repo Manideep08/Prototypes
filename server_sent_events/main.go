@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"time"
 	"net/http"
+	"time"
 )
 
 func main() {
@@ -17,7 +17,6 @@ func handleSSERequest(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Cache-Control", "no-cache")
 	w.Header().Set("Connection", "keep-alive")
 	w.Header().Set("Access-Control-Allow-Origin", "*")
-
 
 	for {
 		currentTime := time.Now().Format("2006-01-02 15:04:05")
